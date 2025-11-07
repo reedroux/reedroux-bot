@@ -97,3 +97,30 @@ npm start
 10. Invite the bot to your server:
 
 Generate an invite link for your bot and invite it to your server using the [Discord Developer Portal](https://discord.com/developers/applications) or [Permissions Calculator](https://discordapi.com/permissions.html).
+
+## 🔗 Useful Links
+
+- ![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white) [Node.js](https://nodejs.org/en/download/)
+- ![Discord.js](https://img.shields.io/badge/Discord.js-7289DA?style=for-the-badge&logo=discord&logoColor=white) [Discord.js](https://discord.js.org/#/)
+- ![Lavalink](https://img.shields.io/badge/Lavalink-7289DA?style=for-the-badge&logo=discord&logoColor=white) [Lavalink](https://github.com/lavalink-devs/Lavalink)
+- ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white) [MongoDB](https://www.mongodb.com/try/download/community)
+- ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white) [PostgreSQL](https://www.postgresql.org/download/)
+- ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white) [Docker](https://www.docker.com/)
+- ![Docker-Compose](https://img.shields.io/badge/Docker--Compose-2496ED?style=for-the-badge&logo=docker&logoColor=white) [Docker-Compose](https://docs.docker.com/compose/)
+
+
+## 🔐 License
+
+Distributed under the GPL-3.0 license. See [![LICENSE](https://img.shields.io/github/license/itzappu/lavamusic?style=social)](https://github.com/itzappu/lavamusic/blob/main/LICENSE) for more information [READ](https://discord.com/channels/942117923001098260/942120006219624469/1278087961774129314).
+
+## ☕ Donate
+
+Do you like this project? Support it by donating!
+[![Paypal]()](https://paypal.me/reedroux45)
+
+## 👥 Contributors
+
+Thanks go to these wonderful people:
+<a href="https://github.com/dawgcodes/reedroux-bot/graphs/contributors">
+<img src="https://contrib.rocks/image?repo=dawgcodes/reedroux-bot" />
+</a>
