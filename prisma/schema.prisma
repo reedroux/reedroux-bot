@@ -1,0 +1,173 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./com.dawgcodes.db"
+}
+
+model guilds {
+  guildId          String             @id @unique
+  prefix           String
+  botChannels      botChannels[]
+  voiceChannels    voiceChannels[]
+  disabledCommands disabledCommands[]
+  stay247          stay247?
+  trackButton      trackButton?
+  Dj               Dj?
+  announce         announce?
+  defaultVolume    defaultVolume?
+  channelStatus    channelStatus?
+}
+
+model defaultVolume {
+  volume      Int       @default(100)
+  guildId     String    @id
+  guilds      guilds    @relation(fields: [guildId], references: [guildId])
+  moderatorId String    @default("977742811132743762")
+  updatedAt   DateTime? @updatedAt
+  createdAt   DateTime? @default(now())
+}
+
+model announce {
+  mode        Boolean?  @default(true)
+  channelId   String?
+  moderatorId String?   @default("977742811132743762")
+  guildId     String    @id @unique
+  guilds      guilds    @relation(fields: [guildId], references: [guildId])
+  prunning    Boolean?  @default(true)
+  updatedAt   DateTime? @updatedAt
+  createdAt   DateTime? @default(now())
+}
+
+model Dj {
+  mode      Boolean   @default(false)
+  guildId   String    @id
+  guilds    guilds    @relation(fields: [guildId], references: [guildId])
+  djRole    DjRole[]
+  updatedAt DateTime? @updatedAt
+  createdAt DateTime? @default(now())
+}
+
+model DjRole {
+  id          Int       @id @default(autoincrement())
+  roleId      String
+  moderatorId String    @default("977742811132743762")
+  guildId     String
+  dj          Dj        @relation(fields: [guildId], references: [guildId])
+  updatedAt   DateTime? @updatedAt
+  createdAt   DateTime? @default(now())
+}
+
+model trackButton {
+  mode        Boolean   @default(true)
+  moderatorId String    @default("977742811132743762")
+  guildId     String    @id
+  guilds      guilds    @relation(fields: [guildId], references: [guildId])
+  updatedAt   DateTime? @updatedAt
+  createdAt   DateTime? @default(now())
+}
+
+model stay247 {
+  mode           Boolean   @default(false)
+  voiceChannelId String?
+  textChannelId  String?
+  moderatorId    String    @default("977742811132743762")
+  guildId        String    @id
+  guilds         guilds    @relation(fields: [guildId], references: [guildId])
+  updatedAt      DateTime? @updatedAt
+  createdAt      DateTime? @default(now())
+}
+
+model disabledCommands {
+  id          Int       @id @default(autoincrement())
+  name        String
+  guildId     String
+  guilds      guilds    @relation(fields: [guildId], references: [guildId])
+  moderatorId String    @default("977742811132743762")
+  updatedAt   DateTime? @updatedAt
+  createdAt   DateTime? @default(now())
+}
+
+model botChannels {
+  id          Int       @id @default(autoincrement())
+  channelId   String
+  guildId     String
+  guilds      guilds    @relation(fields: [guildId], references: [guildId])
+  moderatorId String    @default("977742811132743762")
+  updatedAt   DateTime? @updatedAt
+  createdAt   DateTime? @default(now())
+}
+
+model channelStatus {
+  mode        Boolean   @default(true)
+  guildId     String    @id
+  guilds      guilds    @relation(fields: [guildId], references: [guildId])
+  moderatorId String    @default("977742811132743762")
+  updatedAt   DateTime? @updatedAt
+  createdAt   DateTime? @default(now())
+}
+
+model voiceChannels {
+  id          Int       @id @default(autoincrement())
+  channelId   String
+  guildId     String
+  guilds      guilds    @relation(fields: [guildId], references: [guildId])
+  moderatorId String    @default("977742811132743762")
+  updatedAt   DateTime? @updatedAt
+  createdAt   DateTime? @default(now())
+}
+
+model premium {
+  guildId                 String?
+  userId                  String    @unique
+  user                    user?     @relation(fields: [userId], references: [userId])
+  isPremium               Boolean   @default(false)
+  premiumType             String    @default("none")
+  premiumTimestamp        DateTime
+  premiumExpiresTimestamp DateTime
+  updatedAt               DateTime? @updatedAt
+  createdAt               DateTime? @default(now())
+}
+
+model user {
+  userId      String    @id
+  updatedAt   DateTime? @updatedAt
+  voteCount   Int       @default(0)
+  voteClaimed Int       @default(0)
+  votedAt     DateTime?
+  createdAt   DateTime? @default(now())
+  premium     premium?
+  lastFm      lastFm?
+}
+
+model lastFm {
+  userId    String    @id
+  username  String?
+  sk        String
+  scrobbling Boolean   @default(true)
+  user      user      @relation(fields: [userId], references: [userId])
+  updatedAt DateTime? @updatedAt
+  createdAt DateTime? @default(now())
+}
+
+model playlist {
+  playlistId String    @id @default(uuid())
+  name       String
+  tracks     String?
+  userId     String
+  visibility String
+  updatedAt  DateTime? @updatedAt
+  createdAt  DateTime? @default(now())
+}
+
+model track {
+  encoded String @unique
+  used    BigInt @default(0)
+}
+
+model Command {
+  name String @unique
+  used BigInt @default(0)
+}
