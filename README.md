@@ -1,12 +1,5 @@
 <center><img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=reedroux-bot&fontSize=80&fontAlignY=35&animation=twinkling&fontColor=gradient" /></center>
 
-[![Version][version-shield]](version-url)
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-
 ---
 
 <p align="center">
@@ -49,10 +42,58 @@ Before installing and running the bot, make sure you have:
 
 ---
 
-## 🚀 Installation
+## 🚀 Installation from source
 
-### 1. Clone the repository
-Open your terminal or PowerShell and run:
+1. Clone the Reedroux-Bot repository:
+
 ```bash
 git clone https://github.com/reedroux/reedroux-bot.git
+```
+
+2. Change to the Lavamusic directory:
+
+```bash
 cd reedroux-bot
+```
+
+3. Install the required packages:
+
+```bash
+npm i
+```
+
+4. Compile:
+
+```
+npm run build
+```
+
+5. Copy the `.env.example` file to `.env` and fill in all required values:
+
+6. Copy the `example.<The data source you want to use>.schema.prisma` file to `schema.prisma` in `prisma` folder
+   Note: If you want to use sqlite, skip this step.
+   If you are using a different data source, don't forget to fill in the `DATABASE_URL` value in `.env`.
+
+7. Generate the Prisma client:
+
+```bash
+npx run db:push
+```
+
+8. Run the migrations (Only if you want to migrate your database):
+
+```bash
+npx run db:migrate
+```
+
+9. Run the bot:
+
+Note: You can also run `run.bat` to easily run the bot on Windows.
+
+```bash
+npm start
+```
+
+10. Invite the bot to your server:
+
+Generate an invite link for your bot and invite it to your server using the [Discord Developer Portal](https://discord.com/developers/applications) or [Permissions Calculator](https://discordapi.com/permissions.html).
