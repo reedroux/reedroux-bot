@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://github.com/reedroux/reedroux-bot">
-    <img src="https://cdn.discordapp.com/icons/1273868397242337280/a_41d2b715203ccab3566b45223b4b9c77.gif?size=512" alt="reedroux-bot" width="200" height="200">
+    <img src="https://avatars.githubusercontent.com/u/143243553?s=200&v=4" alt="reedroux-bot" width="200" height="200">
   </a>
 </p>
 
