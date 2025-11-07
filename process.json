@@ -1,0 +1,9 @@
+{
+    "apps": [
+        {
+            "name": "reedroux-bot",
+            "script": "dist/index.js",
+            "restart_delay": 10000
+        }
+    ]
+}

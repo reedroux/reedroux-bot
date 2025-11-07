@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "target": "es2021",
+        "module": "CommonJS",
+        "outDir": "./dist",
+        "rootDir": "./src",
+        "baseUrl": "./src",
+        "strict": false,
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "skipLibCheck": true,
+        "importHelpers": true,
+        "forceConsistentCasingInFileNames": true
+    },
+    "include": ["src/**/*.ts", "structures/**/*.ts", "utils/**/*.ts"],
+    "exclude": ["node_modules", "**/*.spec.ts", "dashboard/**/*"],
+    "ts-node": {
+        "swc": true
+    }
+}
