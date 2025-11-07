@@ -1,0 +1,97 @@
+export default {
+    token: '',
+    clientId: '',
+    guildId: '',
+    prefix: '.',
+    bots: {
+        music: '',
+        dev: '',
+        beta: '',
+    },
+    production: true,
+    links: {
+        supportServer: 'https://reedroux-bot.xyz/support',
+        disk: '',
+        patreon: 'https://reedroux-bot.xyz/premium',
+        vote: 'https://reedroux-bot.xyz/vote',
+        website: "https://reedroux-bot.xyz/",
+    },
+    lastFm: {
+        apiKey: 'e940fd0e79414a06bcaf7241beed2579',
+        apiSecret: '52f9a64f7c3cd31102237e85b2127cb8',
+    },
+    API_BASE: 'https://discord.com/api/v10',
+    colors: {
+        dc: 0x2b2d31,
+        main: 0xffc0cb,
+        red: 0xff0000,
+        green: 0x00ff00,
+        blue: 0x0000ff,
+        yellow: 0xffff00,
+        orange: 0xffa500,
+        purple: 0x800080,
+        pink: 0xffc0cb,
+        white: 0xffffff,
+        black: 0x000000,
+    },
+    emojis: {
+        downarrow: '<:reply:991958469768916993>',
+        offline: '<:discord_offline:1220359307397173341>',
+        online: '<:online:1220359220550041620>',
+        idle: '<:discord_idle:1220359379518488577>',
+    },
+    owners: ['135132310260416512', '708192957987029012'],
+    lavalink: [
+        {
+            url: 'IP_ADRESS:PORT',
+            auth: 'reedroux-bot',
+            name: 'main',
+            secure: false,
+        },
+    ],
+   
+    botlist: {
+        topgg: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjExMTA2MTU0MjIxOTEwMjIyNDMiLCJib3QiOnRydWUsImlhdCI6MTcxMTc4NzgxNH0.zwENKtx-y1FZgMe1LfwFexFXhmzlJOV9gYSDmohwqDA',
+        dbl: '..MY6Qp0',
+    },
+    bemoji: {
+        voldown: '980867256617668648',
+        volup: '980866969970556998',
+        skip: '980873232779448390',
+        previous: '980873116312023080',
+        rewind: '980870141392863252',
+        forward: '980870225283121212',
+        stop: '980871144498409522',
+        play: '1019256810462531584',
+        pause: '1019257830001352804',
+        infinity: '980874600839786546',
+        loop: '980874751151071293',
+        shuffle: '1066211633862557736',
+        like: '1066211021854875738',
+        queue: '1230225103657111613',
+        volUp: '1230224999240171702',
+        volDown: '1230225011470499841',
+        /*  x: "1023887581328441394",
+        right: "1023887513997295687",
+        left: "1023887551397904404",
+        fast: "1023887643366395904",
+        last: "1023887616652877824",
+        
+        home: "1066600074739716156",
+        music_em: "1023962007076089936",
+        filters_em: "1023961806949056512",
+        settings_em: "1023962356717469806",
+        playlist_em: "1023963248233566268",
+        general_em: "1023962847237128263" */
+    },
+
+    hooks: {
+        errors: 'https://discord.com/api/webhooks/1279503298810089575/ojiZDbkjDek1mi2atbE_9u9FPZIjc8Bfghg05P4puJBWPz3rCqnPjtETVmbDGV-iJMJe',
+        lavalink:
+            '',
+        guildAdd:
+            '',
+        event: '',
+        shard: '',
+    },
+};
