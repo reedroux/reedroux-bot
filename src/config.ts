@@ -51,7 +51,7 @@ export default {
     ],
    
     botlist: {
-        topgg: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjExMTA2MTU0MjIxOTEwMjIyNDMiLCJib3QiOnRydWUsImlhdCI6MTcxMTc4NzgxNH0.zwENKtx-y1FZgMe1LfwFexFXhmzlJOV9gYSDmohwqDA',
+        topgg: '',
         dbl: '..MY6Qp0',
     },
     bemoji: {
@@ -86,7 +86,7 @@ export default {
     },
 
     hooks: {
-        errors: 'https://discord.com/api/webhooks/1279503298810089575/ojiZDbkjDek1mi2atbE_9u9FPZIjc8Bfghg05P4puJBWPz3rCqnPjtETVmbDGV-iJMJe',
+        errors: '',
         lavalink:
             '',
         guildAdd:
